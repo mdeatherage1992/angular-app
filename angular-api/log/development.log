@@ -1,0 +1,20 @@
+Started GET "/" for 127.0.0.1 at 2019-01-11 08:13:16 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/matthewdeatherage/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/matthewdeatherage/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 37ms (Views: 17.4ms)
+
+
+MONGODB | 127.0.0.1:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70124880756220 type=uuid data=0x3cd383b7a91f4927...>}]}
+MONGODB | 127.0.0.1:27017 | admin.endSessions | SUCCEEDED | 0.002s
+MONGODB | 127.0.0.1:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70124880756220 type=uuid data=0x3cd383b7a91f4927...>}]}
+MONGODB | 127.0.0.1:27017 | admin.endSessions | SUCCEEDED | 0.003s
+Started GET "/" for 127.0.0.1 at 2019-01-12 08:11:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/matthewdeatherage/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/matthewdeatherage/.rvm/gems/ruby-2.3.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 20ms (Views: 9.9ms)
+
+
+MONGODB | 127.0.0.1:27017 | admin.endSessions | STARTED | {"endSessions"=>[{"id"=><BSON::Binary:0x70268837423560 type=uuid data=0x2b2153c1d87d4215...>}]}
+MONGODB | 127.0.0.1:27017 | admin.endSessions | SUCCEEDED | 0.000s
