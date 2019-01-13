@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   data: {}
   ngOnInit() {
      this._appComponentService.getData().subscribe(
-      data => { this.data = data},
+      data => { this.data = JSON.stringify(data) },
       err => console.error(err)
      );
   }
