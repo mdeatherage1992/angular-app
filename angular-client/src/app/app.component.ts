@@ -7,9 +7,9 @@ import { AppComponentService } from './app.component.service';
 })
 export class AppComponent implements OnInit {
   constructor(private _appComponentService: AppComponentService) { }
-  data: any; //any here is just for demo purpose; please change with the type returned by your endpoint
+  data: {}
   ngOnInit() {
-     this._appComponentService.getUsers().subscribe(
+     this._appComponentService.getData().subscribe(
       data => { this.data = data},
       err => console.error(err)
      );

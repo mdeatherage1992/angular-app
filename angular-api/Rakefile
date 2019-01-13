@@ -1,82 +1,82 @@
-require "./config/boot"
-require "mongo"
-require "mongoid"
-namespace "import" do
-  task "areas" do
-    areas = ApplicationController.mongo_db.collection "areas"
-    areas.drop()
-    areas.insert_one({
-      "boundaries" => {
-        "type" => "Polygon",
-        "coordinates" => [
-          [[0, 0],[3, 6],[6, 3],[3, 1],[0,0]]
-        ]
-      },
-    })
-    areas.insert_one({
-      "boundaries" => {
-        "type" => "Polygon",
-        "coordinates" => [
-          [[6, 6],[9, 12],[12, 9],[9, 7],[6, 6]]
-        ]
-      },
-    })
-    areas.insert_one({
-      "boundaries" => {
-        "type" => "Polygon",
-        "coordinates" => [
-          [[12,12],[15,18],[18,15],[15,13],[12,12]]
-        ]
-      },
-    })
-  end
-  task "stores" do
-    stores = ApplicationController.mongo_db.collection "stores"
-    stores.drop()
-    stores.insert_one({
-  "location" => {
-    "type" => "Point",
-    "coordinates" => [8,10]
-  },
-  "description" => "The Mongo Store 1",
-  "rid" => "model-one",
-})
-stores.insert_one({
-  "location" => {
-    "type" => "Point",
-    "coordinates" => [2,3]
-  },
-  "description" => "The Mongo Store 2",
-  "rid" => "model-two",
-})
-stores.insert_one({
-  "location" => {
-    "type" => "Point",
-    "coordinates" => [7,9]
-  },
-  "description" => "The Mongo Store 2",
-  "rid" => "model-two",
-})
-stores.insert_one({
-  "location" => {
-    "type" => "Point",
-    "coordinates" => [15,16]
-  },
-  "description" => "The Mongo Store 1",
-  "rid" => "model-one",
-})
-stores.insert_one({
-  "location" => {
-    "type" => "Point",
-    "coordinates" => [18,15]
-  },
-  "description" => "The Mongo Store 2",
-  "rid" => "model-two",
-})
-  end
-  task "models" do
-    models = ApplicationController.mongo_db.collection "models"
-    models.insert_one({:name => "model-one"})
-    models.insert_one({:name => "model-two"})
-  end
-end
+
+require_relative 'config/application'
+Rails.application.load_tasks
+# namespace "import" do
+#   task "areas" do
+#     areas = ApplicationController.mongo_db.collection "areas"
+#     areas.drop()
+#     areas.insert_one({
+#       "boundaries" => {
+#         "type" => "Polygon",
+#         "coordinates" => [
+#           [[0, 0],[3, 6],[6, 3],[3, 1],[0,0]]
+#         ]
+#       },
+#     })
+#     areas.insert_one({
+#       "boundaries" => {
+#         "type" => "Polygon",
+#         "coordinates" => [
+#           [[6, 6],[9, 12],[12, 9],[9, 7],[6, 6]]
+#         ]
+#       },
+#     })
+#     areas.insert_one({
+#       "boundaries" => {
+#         "type" => "Polygon",
+#         "coordinates" => [
+#           [[12,12],[15,18],[18,15],[15,13],[12,12]]
+#         ]
+#       },
+#     })
+#   end
+#   task "stores" do
+#     stores = ApplicationController.mongo_db.collection "stores"
+#     stores.drop()
+#     stores.insert_one({
+#   "location" => {
+#     "type" => "Point",
+#     "coordinates" => [8,10]
+#   },
+#   "description" => "The Mongo Store 1",
+#   "rid" => "model-one",
+# })
+# stores.insert_one({
+#   "location" => {
+#     "type" => "Point",
+#     "coordinates" => [2,3]
+#   },
+#   "description" => "The Mongo Store 2",
+#   "rid" => "model-two",
+# })
+# stores.insert_one({
+#   "location" => {
+#     "type" => "Point",
+#     "coordinates" => [7,9]
+#   },
+#   "description" => "The Mongo Store 2",
+#   "rid" => "model-two",
+# })
+# stores.insert_one({
+#   "location" => {
+#     "type" => "Point",
+#     "coordinates" => [15,16]
+#   },
+#   "description" => "The Mongo Store 1",
+#   "rid" => "model-one",
+# })
+# stores.insert_one({
+#   "location" => {
+#     "type" => "Point",
+#     "coordinates" => [18,15]
+#   },
+#   "description" => "The Mongo Store 2",
+#   "rid" => "model-two",
+# })
+#   end
+#   task "models" do
+#     models = ApplicationController.mongo_db.collection "models"
+#     models.insert_one({:name => "model-one"})
+#     models.insert_one({:name => "model-two"})
+#   end
+# end

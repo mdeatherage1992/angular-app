@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppComponentService } from './app.component.service'
-
 @NgModule({
   declarations: [
     AppComponent
